@@ -2,7 +2,7 @@ import { Product, Hairstyle } from '../types';
 
 export const siteConfig = {
   salonName: "Afrolocs",
-  phone: import.meta.env.VITE_WHATSAPP_NUMBER || "2250102030405",
+  phone: import.meta.env.VITE_WHATSAPP_NUMBER || "+22558233440",
   address: "123 Avenue de la Coiffure, Abidjan, Côte d'Ivoire",
   email: "contact@salonafro.com",
   socialMedia: {
@@ -21,186 +21,253 @@ export const siteConfig = {
 export const products: Product[] = [
   {
     id: "1",
-    name: "Huile Capillaire Naturelle",
+    name: "Lock Logy – Eau de Rose Loc Mist",
     price: 15000,
-    description: "Huile nourrissante 100% naturelle pour locks et tresses, enrichie en karité et coco",
+    description: "Brume légère à l’eau de rose qui hydrate, rafraîchit et parfume délicatement les locs. Apaise le cuir chevelu et laisse vos locs doux, brillants et revitalisés.",
     image: "/images/products/huile-naturelle.jpg",
     category: "Soins",
     features: ["100% naturel", "Hydratation intense", "Sans produits chimiques"]
   },
+  // {
+  //   id: "2",
+  //   name: "Taliah Love My Locs – Gro Loc Drops",
+  //   price: 8000,
+  //   description: "Sérum léger spécialement conçu pour stimuler la croissance des locs, hydrater le cuir chevelu et réduire les démangeaisons. Enrichi en huiles naturelles, il renforce les racines et laisse les locs plus saines, douces et nourries. Idéal pour tous les types de locs.",
+  //   image: "/IMAGES/img1.jpeg",
+  //   category: "Styling",
+  //   features: ["Tenue longue durée", "Texture naturelle", "Sans résidu"]
+  // },
+
   {
     id: "2",
-    name: "Cire à Locks Fixante",
+    name: "Taliah Love My Locs – Gro Loc Drops",
     price: 8000,
-    description: "Cire fixante naturelle pour maintenir et discipliner vos locks toute la journée",
-    image: "/images/products/cire-locks.jpg",
-    category: "Styling",
+    description: "Sérum léger spécialement conçu pour stimuler la croissance des locs, hydrater le cuir chevelu et réduire les démangeaisons. Enrichi en huiles naturelles, il renforce les racines et laisse les locs plus saines, douces et nourries. Idéal pour tous les types de locs.",
+    image: "/IMAGES/produis1.jpeg",
+    category: "Soins",
     features: ["Tenue longue durée", "Texture naturelle", "Sans résidu"]
   },
   {
     id: "3",
-    name: "Shampooing Hydratant Afro",
+    name: "Jamaican Mango & Lime – Island Oil",
     price: 12000,
-    description: "Nettoyant doux spécialement formulé pour les cheveux africains texturés",
+    description: "Huile légère et nourrissante formulée pour hydrater les locs, apaiser le cuir chevelu et donner un éclat naturel. Enrichie en huiles tropicales, elle adoucit, renforce et aide à prévenir la casse sans laisser de résidu.",
     image: "/images/products/shampooing.jpg",
     category: "Soins",
     features: ["Doux et nourrissant", "Préserve les locks", "pH équilibré"]
   },
   {
     id: "4",
-    name: "Beurre de Karité Pur",
-    price: 10000,
-    description: "Beurre de karité 100% pur pour une hydratation intense et naturelle",
+    name: "Aloe Locks – Shampooing Purifiant",
+    price: 5000,
+    description: "Shampooing doux et purifiant enrichi à l’aloe vera, conçu pour nettoyer en profondeur les locs et le cuir chevelu tout en les hydratant. Laisse les cheveux frais, légers et revitalisés.",
     image: "/images/products/karite.jpg",
     category: "Soins",
     features: ["100% pur et naturel", "Hydratation profonde", "Multi-usage"]
   },
   {
     id: "5",
-    name: "Spray Hydratant Quotidien",
-    price: 9000,
-    description: "Spray léger pour l'hydratation quotidienne des locks et tresses",
+    name: "Jamaican Mango & Lime – Locking Gel",
+    price: 15000,
+    description: "Gel coiffant spécialement conçu pour définir et maintenir les locs. Offre une tenue ferme tout en nourrissant les cheveux et le cuir chevelu, pour des locs saines et bien entretenues.",
     image: "/images/products/spray-hydratant.jpg",
     category: "Soins",
     features: ["Léger et non gras", "Usage quotidien", "Rafraîchissant"]
   },
   {
     id: "6",
-    name: "Gel Aloe Vera Naturel",
-    price: 7000,
-    description: "Gel d'aloe vera pur pour apaiser le cuir chevelu et hydrater les pointes",
+    name: "Shine N Jam – Conditioning Gel Extra Hold",
+    price: 9000,
+    description: "Gel coiffant à tenue extra-forte qui définit et maintient les locs, twists et braids tout en hydratant et protégeant le cuir chevelu. Laisse les cheveux brillants, doux et sans résidu.",
     image: "/images/products/aloevera.jpg",
     category: "Soins",
     features: ["Apaisant", "Sans alcool", "Multi-fonctions"]
   },
-  {
+  // {
+  //   id: "7",
+  //   name: "Kit Démarrage Locks",
+  //   price: 35000,
+  //   description: "Kit complet pour débuter vos locks avec tous les produits essentiels",
+  //   image: "/images/products/kit-locks.jpg",
+  //   category: "Kits",
+  //   features: ["Produits complémentaires", "Guide d'utilisation", "Économique"]
+  // },
+   {
     id: "7",
-    name: "Kit Démarrage Locks",
-    price: 35000,
-    description: "Kit complet pour débuter vos locks avec tous les produits essentiels",
+    name: "Aloe Locs – Gelée Hibiscus",
+    price: 8000,
+    description: "Gelée coiffante enrichie à l’aloe vera et à l’hibiscus pour définir et maintenir les locs, twists et braids. Hydrate, adoucit et apporte brillance naturelle sans résidu.",
     image: "/images/products/kit-locks.jpg",
-    category: "Kits",
+    category: "Soins",
     features: ["Produits complémentaires", "Guide d'utilisation", "Économique"]
   },
-  {
-    id: "8",
-    name: "Huile de Ricin Jamaïcaine",
-    price: 11000,
-    description: "Huile de ricin pure pour stimuler la pousse et renforcer les cheveux",
-    image: "/images/products/ricin.jpg",
-    category: "Soins",
-    features: ["Stimule la pousse", "Renforce les cheveux", "100% pure"]
-  }
+  // {
+  //   id: "8",
+  //   name: "Huile de Ricin Jamaïcaine",
+  //   price: 11000,
+  //   description: "Huile de ricin pure pour stimuler la pousse et renforcer les cheveux",
+  //   image: "/images/products/ricin.jpg",
+  //   category: "Soins",
+  //   features: ["Stimule la pousse", "Renforce les cheveux", "100% pure"]
+  // }
 ];
 
 export const hairstyles: Hairstyle[] = [
   {
     id: "1",
-    name: "Locks Traditionnelles",
+    name: "Retwist",
     duration: "3-4 heures",
-    price: 25000,
+    price: 7000,
     image: "/images/hairstyles/locks-traditionnelles.jpg",
     category: "Locks",
-    description: "Locks classiques réalisées avec expertise et soin"
+    description: "Retwist classiques réalisées avec expertise et soin"
   },
+  // {
+  //   id: "2",
+  //   name: "Tresses Cornrows",
+  //   duration: "2-3 heures",
+  //   price: 18000,
+  //   image: "/images/hairstyles/cornrows.jpg",
+  //   category: "Tresses",
+  //   description: "Tresses traditionnelles africaines aux motifs variés"
+  // },
+
   {
     id: "2",
-    name: "Tresses Cornrows",
+    name: "Départ au crochet",
     duration: "2-3 heures",
-    price: 18000,
+    price: 30000,
     image: "/images/hairstyles/cornrows.jpg",
-    category: "Tresses",
-    description: "Tresses traditionnelles africaines aux motifs variés"
+    category: "Locks",
+    description: "Départ au crochet nettes et régulières"
   },
   {
     id: "3",
-    name: "Locks au Crochet",
+    name: "Départ en Twists",
     duration: "4-5 heures",
     price: 30000,
     image: "/images/hairstyles/locks-crochet.jpg",
     category: "Locks",
     description: "Technique moderne pour des locks nettes et régulières"
   },
+  // {
+  //   id: "4",
+  //   name: "Box Braids Classiques",
+  //   duration: "5-6 heures",
+  //   price: 35000,
+  //   image: "/images/hairstyles/box-braids.jpg",
+  //   category: "Tresses",
+  //   description: "Tresses box braids élégantes et durables"
+  // },
+
   {
     id: "4",
-    name: "Box Braids Classiques",
-    duration: "5-6 heures",
-    price: 35000,
+    name: "Vanille",
+    duration: "2-3 heures",
+    price: 10000,
     image: "/images/hairstyles/box-braids.jpg",
-    category: "Tresses",
-    description: "Tresses box braids élégantes et durables"
+    category: "Locks",
+    description: "vanille élégantes et durables"
   },
+  // {
+  //   id: "5",
+  //   name: "Soins et Entretien Locks",
+  //   duration: "1-2 heures",
+  //   price: 12000,
+  //   image: "/images/hairstyles/locks-soins.jpg",
+  //   category: "Entretien",
+  //   description: "Service complet d'entretien et de soins pour vos locks"
+  // },
   {
     id: "5",
-    name: "Soins et Entretien Locks",
-    duration: "1-2 heures",
-    price: 12000,
+    name: "Départ en vanille",
+    duration: "2-5 heures",
+    price: 25000,
     image: "/images/hairstyles/locks-soins.jpg",
-    category: "Entretien",
-    description: "Service complet d'entretien et de soins pour vos locks"
-  },
-  {
-    id: "6",
-    name: "Tresses Fulani",
-    duration: "3-4 heures",
-    price: 22000,
-    image: "/images/hairstyles/fulani.jpg",
-    category: "Tresses",
-    description: "Tresses ethniques inspirées de la culture peule"
-  },
-  {
-    id: "7",
-    name: "Locks Diamants",
-    duration: "4-5 heures",
-    price: 32000,
-    image: "/images/hairstyles/locks-diamants.jpg",
     category: "Locks",
-    description: "Locks stylisées avec motifs géométriques modernes"
+    description: "Départ en vanille nettes et régulières"
   },
-  {
-    id: "8",
-    name: "Tresses Goddess",
-    duration: "6-7 heures",
-    price: 40000,
-    image: "/images/hairstyles/goddess.jpg",
-    category: "Tresses",
-    description: "Tresses sophistiquées avec rajouts et ornements"
+  // {
+  //   id: "6",
+  //   name: "Tresses Fulani",
+  //   duration: "3-4 heures",
+  //   price: 22000,
+  //   image: "/images/hairstyles/fulani.jpg",
+  //   category: "Tresses",
+  //   description: "Tresses ethniques inspirées de la culture peule"
+  // },
+   {
+    id: "6",
+    name: "Interlocking",
+    duration: "1-2 heures",
+    price: 5000,
+    image: "/images/hairstyles/fulani.jpg",
+    category: "Locks",
+    description: " ethniques proffessionnelles et realisées avec soin"
   },
+  // {
+  //   id: "7",
+  //   name: "Locks Diamants",
+  //   duration: "4-5 heures",
+  //   price: 32000,
+  //   image: "/images/hairstyles/locks-diamants.jpg",
+  //   category: "Locks",
+  //   description: "Locks stylisées avec motifs géométriques modernes"
+  // },
+  // {
+  //   id: "8",
+  //   name: "Tresses Goddess",
+  //   duration: "6-7 heures",
+  //   price: 40000,
+  //   image: "/images/hairstyles/goddess.jpg",
+  //   category: "Locks",
+  //   description: "Tresses sophistiquées avec rajouts et ornements"
+  // },
   {
     id: "9",
-    name: "Locks Nattées",
+    name: "Barels",
     duration: "3-4 heures",
-    price: 28000,
+    price: 10000,
     image: "/images/hairstyles/locks-nattes.jpg",
     category: "Locks",
-    description: "Locks travaillées en nattes pour un style unique"
+    description: "Barels élégantes avec finition soignée"
   },
   {
     id: "10",
-    name: "Tresses Collées",
+    name: "Vanille",
     duration: "2-3 heures",
-    price: 15000,
+    price: 10000,
     image: "/images/hairstyles/tresses-collées.jpg",
-    category: "Tresses",
-    description: "Tresses plaquées pour un effet sleek et moderne"
+    category: "Locks",
+    description: "Vanille élégantes et durables"
   },
-  {
+  // {
+  //   id: "11",
+  //   name: "Consultation Initiale",
+  //   duration: "30-45 min",
+  //   price: 5000,
+  //   image: "/images/hairstyles/consultation.jpg",
+  //   category: "Consultation",
+  //   description: "Première consultation pour définir votre projet capillaire"
+  // },
+
+   {
     id: "11",
-    name: "Consultation Initiale",
+    name: "Retwist",
     duration: "30-45 min",
-    price: 5000,
+    price: 7000,
     image: "/images/hairstyles/consultation.jpg",
-    category: "Consultation",
-    description: "Première consultation pour définir votre projet capillaire"
+    category: "Locks",
+    description: "Retwist rapides pour entretenir vos locks "
   },
   {
     id: "12",
-    name: "Dreadlocks Créatives",
+    name: "Micro twists",
     duration: "5-6 heures",
-    price: 38000,
+    price: 30000,
     image: "/images/hairstyles/dreadlocks-creatives.jpg",
     category: "Locks",
-    description: "Dreadlocks artistiques avec motifs et formes originales"
+    description: "Micro twists fins et élégants pour un style sophistiqué"
   }
 ];
 

@@ -280,7 +280,8 @@
 
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Phone, MapPin, Mail, Clock, Send } from 'lucide-react';
+import { Phone, MapPin, Mail, Clock, Send,Instagram } from 'lucide-react';
+import { SiTiktok } from "react-icons/si";
 import { siteConfig } from '../data/siteData';
 import WhatsAppButton from '../components/WhatsAppButton';
 
@@ -381,7 +382,7 @@ const Contact: React.FC = () => {
                 <div className="bg-primary bg-opacity-10 p-3 rounded-full">
                   <Mail className="text-primary" size={24} />
                 </div>
-                <div>
+                {/* <div>
                   <h3 className="font-semibold text-secondary mb-2">Email</h3>
                   <a 
                     href={`mailto:${siteConfig.email}`}
@@ -389,7 +390,7 @@ const Contact: React.FC = () => {
                   >
                     {siteConfig.email}
                   </a>
-                </div>
+                </div> */}
               </div>
 
               <div className="flex items-start space-x-4 p-6 bg-white rounded-2xl shadow-lg">
@@ -399,9 +400,9 @@ const Contact: React.FC = () => {
                 <div>
                   <h3 className="font-semibold text-secondary mb-2">Horaires</h3>
                   <div className="text-gray-600 space-y-1">
-                    <p>Lundi - Vendredi: 9h00 - 19h00</p>
-                    <p>Samedi: 9h00 - 18h00</p>
-                    <p>Dimanche: Fermé</p>
+                    <p>Sam - Dim: 8h00 - 18h00</p>
+                    {/* <p>Samedi: 9h00 - 18h00</p>
+                    <p>Dimanche: Fermé</p> */}
                   </div>
                 </div>
               </div>
@@ -418,16 +419,16 @@ const Contact: React.FC = () => {
                   className="bg-secondary text-white p-3 rounded-full hover:bg-opacity-90 transition-colors"
                 >
                   <span className="sr-only">Instagram</span>
-                  📷
+                   <Instagram size={20} />
                 </a>
                 <a
-                  href={siteConfig.socialMedia.facebook}
+                  href={siteConfig.socialMedia.tiktok}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="bg-secondary text-white p-3 rounded-full hover:bg-opacity-90 transition-colors"
                 >
                   <span className="sr-only">Facebook</span>
-                  📘
+                  <SiTiktok size={24} />
                 </a>
               </div>
             </div>

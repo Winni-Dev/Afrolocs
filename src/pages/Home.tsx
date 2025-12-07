@@ -629,21 +629,22 @@ import HairstyleCard from '../components/HairstyleCard';
 import WhatsAppButton from '../components/WhatsAppButton';
 import OrderModal from '../components/OrderModal';
 import { Link } from 'react-router-dom';
-import img1 from '../assets/img/img1.jpg';
-import img2 from '../assets/img/img2.jpg';
-import img3 from '../assets/img/img3.jpg';
-import img4 from '../assets/img/img4.jpg';
+import img1 from '../assets/img/img1.jpeg';
+import img2 from '../assets/img/img2.jpeg';
+import img3 from '../assets/img/img3.jpeg';
+import img4 from '../assets/img/img4.jpeg';
+import tresse3 from '../assets/img/tresse3.jpeg'
 import tresse7 from '../assets/img/tresse7.jpeg'
 import tresse5 from '../assets/img/tresse5.jpeg'
 import tresse1 from '../assets/img/tresse9.jpg'
-import prod1 from'../assets/img/produis1.png'
-import prod2 from'../assets/img/produis2.webp'
-import prod3 from '../assets/img/produsi3.jpg'
+import prod1 from'../assets/img/produis1.jpeg'
+import prod2 from'../assets/img/produis2.jpeg'
+import prod3 from '../assets/img/produsi3.jpeg'
 
 
 // Images par catégorie pour les produits - chaque catégorie peut utiliser plusieurs images
 const productCategoryImageSets: Record<string, string[]> = {
-  'Soins': [prod1, img2 ,prod3],
+  'Soins': [prod1, prod2 ,prod3],
   'Styling': [img2, prod2, img4, img1],
   'Kits': [img3, img4, img1, img2],
   'Autre': [img4, img1, img2, img3]
@@ -651,7 +652,7 @@ const productCategoryImageSets: Record<string, string[]> = {
 
 // Images par catégorie pour les coiffures - chaque catégorie peut utiliser plusieurs images
 const hairstyleCategoryImageSets: Record<string, string[]> = {
-  'Locks': [tresse7,tresse5,tresse5],
+  'Locks': [tresse7,tresse5,tresse3],
   'Tresses': [tresse1,tresse1],
   'Braids': [img3, img4, img1, img2],
   'Twists': [img4, img1, img2, img3],
@@ -697,13 +698,13 @@ const HomePage: React.FC = () => {
   // Images avec meilleur contraste pour la lisibilité
   const carouselSlides = [
     {
-      image: img1,
+      image: img2,
       title: "Salon Afro Élégance",
       subtitle: "Votre expert en locks et tresses",
       description: "Ambiance chaleureuse et professionnelle"
     },
     {
-      image: img2,
+      image: img1,
       title: "Espace Détente & Beauté",
       subtitle: "Service premium à domicile disponible",
       description: "Confort et expertise réunis"
@@ -934,7 +935,7 @@ const HomePage: React.FC = () => {
                 </div>
                 <div className="flex items-center space-x-2 bg-black/30 backdrop-blur-sm rounded-full px-3 py-2">
                   <Clock className="w-3 h-3 md:w-4 md:h-4" />
-                  <span>Lun-Sam: 8h-19h</span>
+                  <span>Sam-Dim: 8h-18h</span>
                 </div>
               </motion.div>
             </motion.div>

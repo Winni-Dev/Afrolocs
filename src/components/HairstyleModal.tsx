@@ -14,6 +14,16 @@ interface HairstyleModalProps {
   totalHairstyles: number;
 }
 
+const getImageSource = (image: string | { type: 'video'; src: string }): string => {
+  if (typeof image === 'string') {
+    return image;
+  }
+  if (image.type === 'video') {
+    return 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"%3E%3Crect fill="%23333" width="100" height="100"/%3E%3Cpolygon fill="%23fff" points="35,20 35,80 80,50"/%3E%3C/svg%3E';
+  }
+  return '';
+};
+
 const HairstyleModal: React.FC<HairstyleModalProps> = ({
   isOpen,
   onClose,
@@ -25,6 +35,9 @@ const HairstyleModal: React.FC<HairstyleModalProps> = ({
 }) => {
 
   if (!hairstyle) return null;
+
+  const isVideo = typeof hairstyle.image === 'object' && hairstyle.image.type === 'video';
+  const imageUrl = getImageSource(hairstyle.image);
 
   return (
     <AnimatePresence>
@@ -48,21 +61,24 @@ const HairstyleModal: React.FC<HairstyleModalProps> = ({
             <div className="absolute top-4 right-4 z-10 flex gap-2">
               <button
                 onClick={onPrev}
-                className="bg-white/90 backdrop-blur-sm rounded-full p-3 hover:bg-white transition-all duration-300 shadow-lg"
+                aria-label="Précédent"
+                className="bg-primary text-white rounded-full p-3 hover:bg-primary/90 transition-all duration-300 shadow-lg border border-primary/80"
               >
-                <ChevronLeft size={20} />
+                <ChevronLeft size={20} className="text-white" />
               </button>
               <button
                 onClick={onNext}
-                className="bg-white/90 backdrop-blur-sm rounded-full p-3 hover:bg-white transition-all duration-300 shadow-lg"
+                aria-label="Suivant"
+                className="bg-primary text-white rounded-full p-3 hover:bg-primary/90 transition-all duration-300 shadow-lg border border-primary/80"
               >
-                <ChevronRight size={20} />
+                <ChevronRight size={20} className="text-white" />
               </button>
               <button
                 onClick={onClose}
-                className="bg-white/90 backdrop-blur-sm rounded-full p-3 hover:bg-white transition-all duration-300 shadow-lg"
+                aria-label="Fermer"
+                className="bg-red-600 text-white rounded-full p-3 hover:bg-red-500 transition-all duration-300 shadow-lg border border-red-600/80"
               >
-                <X size={20} />
+                <X size={20} className="text-white" />
               </button>
             </div>
 
@@ -71,13 +87,23 @@ const HairstyleModal: React.FC<HairstyleModalProps> = ({
               {currentIndex} / {totalHairstyles}
             </div>
 
-            {/* Section image */}
+            {/* Section image/vidéo */}
             <div className="lg:w-1/2 relative">
-              <img
-                src={hairstyle.image}
-                alt={hairstyle.name}
-                className="w-full h-64 lg:h-full object-cover"
-              />
+              {isVideo && typeof hairstyle.image === 'object' ? (
+                <video
+                  src={hairstyle.image.src}
+                  className="w-full h-64 lg:h-full object-cover"
+                  controls
+                  autoPlay
+                  playsInline
+                />
+              ) : (
+                <img
+                  src={imageUrl}
+                  alt={hairstyle.name}
+                  className="w-full h-64 lg:h-full object-cover"
+                />
+              )}
               <div className="absolute bottom-4 left-4 bg-primary text-white px-4 py-2 rounded-full text-sm font-bold">
                 {hairstyle.category}
               </div>

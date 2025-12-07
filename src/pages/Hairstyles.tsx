@@ -508,9 +508,14 @@ import img6 from '../assets/img/tresse6.jpeg';
 import img7 from '../assets/img/tresse7.jpeg';
 import img8 from '../assets/img/tresse8.jpeg';
 
+import barelle from '../assets/img/videobarelle.mp4';
+import retwistV from '../assets/img/retwistvideo.mp4';
+
+
+
 // Images par catégorie - chaque catégorie peut utiliser plusieurs images
-const categoryImageSets: Record<string, string[]> = {
-  'Locks': [img4, img4,img3,img6,img8,img8],
+const categoryImageSets: Record<string, (string | { type: 'video'; src: string })[]> = {
+  'Locks': [{ type: 'video', src: retwistV },img2, img3, img1, img4, img5, { type: 'video', src: barelle }, img6, img7, img8],
   'Tresses': [img2, img6, img1, img3, img5],
   'Braids': [img3, img4, img5, img6],
   'Twists': [img7, img8, img1, img2],
@@ -521,7 +526,7 @@ const categoryImageSets: Record<string, string[]> = {
 };
 
 // Fonction pour obtenir une image différente selon la catégorie et l'index
-const getImageForCategory = (category: string, index: number): string => {
+const getImageForCategory = (category: string, index: number): string | { type: 'video'; src: string } => {
   const imageSet = categoryImageSets[category] || categoryImageSets['Autre'];
   // Utiliser l'index modulo la taille du tableau pour alterner les images
   return imageSet[index % imageSet.length];
@@ -657,7 +662,7 @@ const Hairstyles: React.FC = () => {
               <select
                 value={sortBy}
                 onChange={(e) => setSortBy(e.target.value as any)}
-                className="bg-white border-2 border-gray-200 rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary focus:border-primary transition-all duration-300"
+                className="bg-white text-gray-900 border-2 border-gray-200 rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary focus:border-primary transition-all duration-300"
               >
                 <option value="name">Trier par nom</option>
                 <option value="price">Trier par prix</option>
@@ -708,7 +713,7 @@ const Hairstyles: React.FC = () => {
                   <select
                     value={sortBy}
                     onChange={(e) => setSortBy(e.target.value as any)}
-                    className="w-full bg-white border-2 border-gray-200 rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary focus:border-primary transition-all duration-300"
+                    className="w-full bg-white text-gray-900 border-2 border-gray-200 rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary focus:border-primary transition-all duration-300"
                   >
                     <option value="name">Nom</option>
                     <option value="price">Prix</option>

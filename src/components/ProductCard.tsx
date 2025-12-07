@@ -238,7 +238,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, onClick, onOrderClic
                 onOrderClick();
               }
             }}
-            className="bg-gradient-to-r from-secondary to-secondary/90 text-white px-6 py-3 rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300 flex items-center space-x-2 group/btn"
+            className="bg-primary text-white px-6 py-3 rounded-xl font-semibold shadow-lg hover:bg-primary/90 hover:shadow-xl transition-all duration-300 flex items-center space-x-2"
           >
             <ShoppingCart size={18} className="group-hover/btn:scale-110 transition-transform" />
             <span>Commander</span>

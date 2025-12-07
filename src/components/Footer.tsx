@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { MapPin, Phone, Mail, Instagram, Facebook, Scissors } from 'lucide-react';
+import { MapPin, Phone, Instagram, Scissors  } from 'lucide-react';
+import { SiTiktok } from "react-icons/si";
 import { siteConfig } from '../data/siteData';
 import WhatsAppButton from './WhatsAppButton';
 
@@ -114,7 +115,7 @@ const Footer: React.FC = () => {
                 </a>
               </div>
               
-              <div className="flex items-center space-x-3">
+              {/* <div className="flex items-center space-x-3">
                 <Mail className="text-primary flex-shrink-0" size={18} />
                 <a 
                   href={`mailto:${siteConfig.email}`}
@@ -122,7 +123,7 @@ const Footer: React.FC = () => {
                 >
                   {siteConfig.email}
                 </a>
-              </div>
+              </div> */}
             </div>
 
             {/* Réseaux sociaux */}
@@ -138,12 +139,12 @@ const Footer: React.FC = () => {
                   <Instagram size={20} />
                 </a>
                 <a
-                  href={siteConfig.socialMedia.facebook}
+                  href={siteConfig.socialMedia.tiktok}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="bg-white bg-opacity-10 p-2 rounded-full hover:bg-primary transition-colors"
                 >
-                  <Facebook size={20} />
+                 <SiTiktok size={24} />
                 </a>
               </div>
             </div>

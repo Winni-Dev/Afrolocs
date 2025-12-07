@@ -13,7 +13,7 @@ export interface Hairstyle {
   name: string;
   duration: string;
   price?: number;
-  image: string;
+  image: string | { type: 'video'; src: string };
   category: string;
   description?: string;
 }

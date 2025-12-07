@@ -394,12 +394,16 @@ import img1 from '../assets/img/img1.jpg';
 import img2 from '../assets/img/img2.jpg';
 import img3 from '../assets/img/img3.jpg';
 import img4 from '../assets/img/img4.jpg';
-import prod1 from'../assets/img/produis1.png'
-import prod2 from'../assets/img/produis2.webp'
-import prod3 from '../assets/img/produsi3.jpg'
+import prod1 from'../assets/img/produis1.jpeg'
+import prod2 from'../assets/img/produis2.jpeg'
+import prod3 from '../assets/img/produsi3.jpeg'
+import prod4 from '../assets/img/produis4.jpeg'
+import prod5 from '../assets/img/produis5.jpeg'
+import prod6 from '../assets/img/produis6.jpeg'
+import prod7 from '../assets/img/produis7.jpeg'
 // Images par catégorie - chaque catégorie peut utiliser plusieurs images
 const categoryImageSets: Record<string, string[]> = {
-  'Soins': [prod3, prod1, prod2, prod1],
+  'Soins': [prod1, prod2, prod3,prod4, prod5 ,prod6, prod7],
   'Styling': [img2, prod3, img4, img1],
   'Kits': [prod2, img4, img1, prod2,prod2,prod2],
   'Autre': [img4, img1, img2, img3]
@@ -544,7 +548,7 @@ const Products: React.FC = () => {
               <select
                 value={sortBy}
                 onChange={(e) => setSortBy(e.target.value as any)}
-                className="bg-white border-2 border-gray-200 rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary focus:border-primary transition-all duration-300"
+                className="bg-white text-gray-900 border-2 border-gray-200 rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary focus:border-primary transition-all duration-300"
               >
                 <option value="name">Trier par nom</option>
                 <option value="price">Trier par prix</option>
@@ -595,7 +599,7 @@ const Products: React.FC = () => {
                   <select
                     value={sortBy}
                     onChange={(e) => setSortBy(e.target.value as any)}
-                    className="w-full bg-white border-2 border-gray-200 rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary focus:border-primary transition-all duration-300"
+                    className="w-full bg-white text-gray-900 border-2 border-gray-200 rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary focus:border-primary transition-all duration-300"
                   >
                     <option value="name">Nom</option>
                     <option value="price">Prix</option>

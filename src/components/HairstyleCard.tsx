@@ -234,20 +234,45 @@ interface HairstyleCardProps {
   onClick?: () => void;
 }
 
+const getImageSource = (image: string | { type: 'video'; src: string }): string => {
+  if (typeof image === 'string') {
+    return image;
+  }
+  if (image.type === 'video') {
+    // Retourner une image placeholder pour les vidéos
+    return 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"%3E%3Crect fill="%23333" width="100" height="100"/%3E%3Cpolygon fill="%23fff" points="35,20 35,80 80,50"/%3E%3C/svg%3E';
+  }
+  return '';
+};
+
 const HairstyleCard: React.FC<HairstyleCardProps> = ({ hairstyle, onClick }) => {
+  const isVideo = typeof hairstyle.image === 'object' && hairstyle.image.type === 'video';
+  const imageUrl = getImageSource(hairstyle.image);
+
   return (
     <motion.div
       whileHover={{ y: -8, scale: 1.02 }}
       className="bg-white rounded-3xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-500 group border border-gray-100 cursor-pointer"
       onClick={onClick}
     >
-      {/* Image avec overlay */}
+      {/* Image/Vidéo avec overlay */}
       <div className="h-72 bg-gray-200 relative overflow-hidden">
-        <img
-          src={hairstyle.image}
-          alt={hairstyle.name}
-          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-        />
+        {isVideo && typeof hairstyle.image === 'object' ? (
+          <video
+            src={hairstyle.image.src}
+            className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+            autoPlay
+            muted
+            loop
+            playsInline
+          />
+        ) : (
+          <img
+            src={imageUrl}
+            alt={hairstyle.name}
+            className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+          />
+        )}
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
         
         {/* Badge de catégorie */}

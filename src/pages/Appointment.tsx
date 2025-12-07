@@ -277,7 +277,7 @@
 
 // export default Appointment;
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { 
   Calendar, 
@@ -298,6 +298,15 @@ import { hairstyles, siteConfig } from '../data/siteData';
 import WhatsAppButton from '../components/WhatsAppButton';
 
 const Appointment: React.FC = () => {
+  // Scroll to top when this page is mounted so the user always starts at the top
+  useEffect(() => {
+    try {
+      window.scrollTo({ top: 0, left: 0 });
+    } catch (e) {
+      // fallback
+      window.scrollTo(0, 0);
+    }
+  }, []);
   const [formData, setFormData] = useState({
     fullName: '',
     phone: '',
@@ -741,17 +750,17 @@ const Appointment: React.FC = () => {
               </h3>
               <div className="space-y-2 text-gray-700">
                 <div className="flex justify-between items-center py-2 border-b border-gray-100">
-                  <span>Lun - Ven</span>
-                  <span className="font-semibold text-primary">8h - 19h</span>
+                  <span>Sam - Dim</span>
+                  <span className="font-semibold text-primary">8h - 18h</span>
                 </div>
-                <div className="flex justify-between items-center py-2 border-b border-gray-100">
+                {/* <div className="flex justify-between items-center py-2 border-b border-gray-100">
                   <span>Samedi</span>
                   <span className="font-semibold text-primary">8h - 18h</span>
                 </div>
                 <div className="flex justify-between items-center py-2">
                   <span>Dimanche</span>
                   <span className="font-semibold text-red-500">Sur RDV</span>
-                </div>
+                </div> */}
               </div>
             </div>
           </motion.div>

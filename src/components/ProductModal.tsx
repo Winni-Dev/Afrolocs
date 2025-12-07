@@ -62,21 +62,24 @@ const ProductModal: React.FC<ProductModalProps> = ({
             <div className="absolute top-4 right-4 z-10 flex gap-2">
               <button
                 onClick={onPrev}
-                className="bg-white/90 backdrop-blur-sm rounded-full p-3 hover:bg-white transition-all duration-300 shadow-lg"
+                aria-label="Précédent"
+                className="bg-primary text-white rounded-full p-3 hover:bg-primary/90 transition-all duration-300 shadow-lg border border-primary/80"
               >
-                <ChevronLeft size={20} />
+                <ChevronLeft size={20} className="text-white" />
               </button>
               <button
                 onClick={onNext}
-                className="bg-white/90 backdrop-blur-sm rounded-full p-3 hover:bg-white transition-all duration-300 shadow-lg"
+                aria-label="Suivant"
+                className="bg-primary text-white rounded-full p-3 hover:bg-primary/90 transition-all duration-300 shadow-lg border border-primary/80"
               >
-                <ChevronRight size={20} />
+                <ChevronRight size={20} className="text-white" />
               </button>
               <button
                 onClick={onClose}
-                className="bg-white/90 backdrop-blur-sm rounded-full p-3 hover:bg-white transition-all duration-300 shadow-lg"
+                aria-label="Fermer"
+                className="bg-red-600 text-white rounded-full p-3 hover:bg-red-500 transition-all duration-300 shadow-lg border border-red-600/80"
               >
-                <X size={20} />
+                <X size={20} className="text-white" />
               </button>
             </div>
 
