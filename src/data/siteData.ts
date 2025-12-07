@@ -3,12 +3,12 @@ import { Product, Hairstyle } from '../types';
 export const siteConfig = {
   salonName: "Afrolocs",
   phone: import.meta.env.VITE_WHATSAPP_NUMBER || "+22558233440",
-  address: "123 Avenue de la Coiffure, Abidjan, Côte d'Ivoire",
+  address: " Abidjan, Côte d'Ivoire",
   email: "contact@salonafro.com",
   socialMedia: {
-    instagram: "https://instagram.com/salonafro",
+    instagram: "https://www.instagram.com/afrolocs_?igsh=MWJwZGg5dG00cmE4aA==",
     facebook: "https://facebook.com/salonafro",
-    tiktok: "https://tiktok.com/@salonafro"
+    tiktok: "https://www.tiktok.com/@afrolocs1?_r=1&_t=ZM-91woTuRfO4u"
   },
   hours: {
     weekdays: "9h00 - 19h00",
