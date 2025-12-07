@@ -530,7 +530,7 @@ const Contact: React.FC = () => {
         </div>
 
         {/* Carte Google Maps */}
-        <motion.div
+        {/* <motion.div
           {...fadeInUp}
           transition={{ delay: 0.6 }}
           className="mt-16"
@@ -546,7 +546,7 @@ const Contact: React.FC = () => {
               </div>
             </div>
           </div>
-        </motion.div>
+        </motion.div> */}
       </div>
     </div>
   );
